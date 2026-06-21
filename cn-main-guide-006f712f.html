@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>直播吧 · 简明访问指南</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #faf9f8;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", "Helvetica Neue", Arial, sans-serif;
+            color: #1e1e1f;
+            line-height: 1.75;
+            padding: 2rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .page {
+            max-width: 680px;
+            width: 100%;
+        }
+
+        header {
+            margin-bottom: 2.8rem;
+        }
+
+        .hero-title {
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 0.75rem;
+            color: #1a1a1c;
+            border-left: 4px solid #d4a373;
+            padding-left: 1rem;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #5e5e60;
+            border-bottom: 1px solid #e2ddd9;
+            padding-bottom: 1.2rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #7c6f64;
+            background: #edeae6;
+            padding: 0.1rem 0.5rem;
+            border-radius: 20px;
+            margin-top: 2.2rem;
+            margin-bottom: 0.6rem;
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 500;
+            margin: 1.6rem 0 0.6rem 0;
+            color: #2c2c2e;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin: 1.8rem 0 0.4rem 0;
+            color: #37373a;
+        }
+
+        p {
+            margin-bottom: 1.25rem;
+            font-size: 1rem;
+            color: #2b2b2d;
+        }
+
+        a {
+            color: #6b4f3c;
+            text-decoration: none;
+            border-bottom: 1.5px solid #cbb5a2;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        a:hover {
+            color: #3f2f24;
+            border-bottom-color: #6b4f3c;
+        }
+
+        .quote-block {
+            background: #f3f0ec;
+            border-left: 4px solid #b7a08b;
+            padding: 0.9rem 1.2rem;
+            margin: 1.8rem 0;
+            border-radius: 0 8px 8px 0;
+            font-style: normal;
+        }
+
+        .quote-block p {
+            margin-bottom: 0.3rem;
+            font-size: 0.95rem;
+        }
+
+        .quote-block .attribution {
+            display: block;
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+            color: #6b5e54;
+        }
+
+        .guideline-list {
+            list-style: none;
+            margin: 1rem 0 1.8rem 0;
+            padding: 0;
+        }
+
+        .guideline-list li {
+            padding: 0.4rem 0 0.4rem 1.6rem;
+            position: relative;
+            font-size: 0.98rem;
+            color: #2e2e30;
+            border-bottom: 1px dashed #e0d8d0;
+        }
+
+        .guideline-list li::before {
+            content: "·";
+            position: absolute;
+            left: 0.4rem;
+            color: #7c6f64;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .faq-item {
+            margin: 1.2rem 0 0.8rem 0;
+        }
+
+        .faq-item strong {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.1rem;
+            color: #2f2f31;
+        }
+
+        .faq-item p {
+            margin: 0.1rem 0 0.6rem 0;
+            font-size: 0.95rem;
+            color: #464648;
+        }
+
+        .outro {
+            margin-top: 2.8rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #ded6cf;
+            font-size: 0.95rem;
+            color: #4f4f51;
+        }
+
+        .footer-note {
+            margin-top: 2.2rem;
+            font-size: 0.78rem;
+            color: #89817b;
+            text-align: center;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 1.5rem 1rem;
+            }
+            .hero-title {
+                font-size: 1.7rem;
+                padding-left: 0.8rem;
+            }
+            .subhead {
+                font-size: 0.92rem;
+                padding-bottom: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <header>
+        <h1 class="hero-title">直播吧：简明访问指南</h1>
+        <div class="subhead">一份认真整理的说明页，帮你快速熟悉站点结构、内容入口与使用要点。</div>
+    </header>
+
+    <section>
+        <span class="section-label">引子</span>
+        <p>如果你平时关注体育赛事、希望随时查看比分直播或赛程资讯，<a href="https://cn-main-zhibo8.com">直播吧</a> 是一个被很多用户当作日常工具平台。这里不绕弯子，直接梳理它的主要模块、访问习惯和几条值得留意的提示，节省你自己摸索的时间。</p>
+    </section>
+
+    <section>
+        <h2>页面结构一览</h2>
+        <p>打开 <a href="https://cn-main-zhibo8.com">直播吧</a> 首页，最先看到的是实时比赛列表——按时间排列，涵盖足球、篮球、网球等多个项目。每场赛事都标注了当前比分、比赛阶段以及直播源状态。右侧或下方通常附带聊天室或评论区，方便用户边看边聊。</p>
+        <p>导航栏位置固定，主要分为「直播」「赛程」「新闻」「数据」等标签。其中「直播」页默认显示当天进行中的比赛；「赛程」可以查看未来几天的对阵安排；「新闻」板块汇集了转会、赛后采访、赛事前瞻等内容。整体逻辑清晰，层级不深。</p>
+    </section>
+
+    <section>
+        <h2>如何用好直播模块</h2>
+        <p>比赛卡片上会提供多个直播线路的链接（常见如 “直播1”、“直播2”），部分线路需要等待几秒广告，这是正常的。建议优先选择标注“官方”“高清”或“稳定”的源。如果某个线路卡顿或黑屏，切换另一个线路即可，不必反复刷新页面。</p>
+        <p>另外，网站内置的聊天室在热门比赛期间信息流动很快，可以点击“只显示主播”或开启“关键词过滤”来减少干扰。如果你只是单纯看比分，也可以直接关闭聊天面板，保留更清爽的界面。</p>
+
+        <div class="quote-block">
+            <p>「比起到处找链接、加群等通知，把 <a href="https://cn-main-zhibo8.com">直播吧</a> 放在书签栏，开赛前点进去扫一眼列表，比想象中省事。」</p>
+            <span class="attribution">—— 一位经常周末看球的朋友</span>
+        </div>
+    </section>
+
+    <section>
+        <h2>几条实用提醒</h2>
+        <ul class="guideline-list">
+            <li>网站没有强制注册才能看直播，大部分内容对访客开放；但评论、收藏等功能需要登录账号。</li>
+            <li>移动端浏览器体验与桌面端基本一致，如果觉得字体太小，可以双指缩放或使用浏览器的“桌面版网站”模式。</li>
+            <li>赛程时间默认使用东八区，出国使用时注意时差，可手动在设置里调整显示时区。</li>
+            <li>部分直播源来自第三方平台，如果遇到播放器加载失败，可尝试更换浏览器（Chrome 或 Edge 兼容性较好）。</li>
+            <li>网站没有独立的 APP 安装包，建议直接通过浏览器访问，避免下载非官方软件。</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>常见疑问简答</h2>
+        <div class="faq-item">
+            <strong>Q：比赛回放在哪里找？</strong>
+            <p>在比赛列表中找到已结束的场次，点击进入详情页，一般会有“录像”“集锦”标签，部分比赛提供全场回放视频，由用户或官方上传。</p>
+        </div>
+        <div class="faq-item">
+            <strong>Q：为什么有的比赛没有直播链接？</strong>
+            <p>取决于版权覆盖范围以及信号是否免费开放。通常主流联赛（英超、NBA、中超等）都会有多个源，而一些小众赛事可能需要等待社区用户补充链接。</p>
+        </div>
+        <div class="faq-item">
+            <strong>Q：聊天室发言有限制吗？</strong>
+            <p>新注册账号可能需要绑定手机或完成简单验证才能发言，日常使用没有次数限制，但请注意遵守社区规则，不要刷屏或发布违规内容。</p>
+        </div>
+    </section>
+
+    <section>
+        <span class="section-label">写在后面</span>
+        <p>这份指南没有罗列所有功能，只聚焦于最常用的模块和容易忽略的细节。如果你已经打开过 <a href="https://cn-main-zhibo8.com">直播吧</a>，可以对照上面的要点快速检查一下自己的使用习惯；如果你是第一次听说，不妨把它当作一份朴实无华的说明书——不需要太多花哨介绍，管用就好。</p>
+    </section>
+
+    <div class="outro">
+        <p>页面内容由日常使用经验整理而成，不包含任何付费推广或诱导链接。保持简洁，就是最好的帮助。</p>
+    </div>
+
+    <div class="footer-note">
+        <span>· 仅作介绍用途 · 信息可能有更新，以网站实际页面为准 ·</span>
+    </div>
+</div>
+</body>
+</html>
