@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>资料索引 · 365bet 专题综述</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: linear-gradient(145deg, #fbe9e7 0%, #fce4d6 30%, #fde8d0 70%, #f5e6d9 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1.25rem;
+            line-height: 1.6;
+            color: #3e2c23;
+        }
+
+        .page {
+            max-width: 880px;
+            width: 100%;
+            background: rgba(255, 250, 245, 0.70);
+            backdrop-filter: blur(2px);
+            border-radius: 40px 40px 28px 28px;
+            box-shadow: 0 12px 32px rgba(140, 80, 40, 0.10), 0 4px 12px rgba(180, 110, 60, 0.08);
+            overflow: hidden;
+            transition: box-shadow 0.2s;
+        }
+
+        .hero {
+            background: linear-gradient(130deg, #f5cba7 0%, #edbb99 40%, #e8b48a 100%);
+            padding: 3.5rem 2.5rem 2.8rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(180, 120, 70, 0.15);
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: #3a241b;
+            text-shadow: 0 2px 6px rgba(220, 150, 80, 0.20);
+            margin-bottom: 0.2rem;
+        }
+
+        .hero .subhead {
+            display: inline-block;
+            background: rgba(60, 35, 25, 0.08);
+            padding: 0.3rem 1.4rem;
+            border-radius: 60px;
+            font-size: 1rem;
+            color: #4d3327;
+            backdrop-filter: blur(2px);
+            margin-top: 0.6rem;
+            border: 1px solid rgba(200, 150, 100, 0.25);
+        }
+
+        .hero .reading-time {
+            display: block;
+            margin-top: 1.2rem;
+            font-size: 0.85rem;
+            color: #5e3f2f;
+            opacity: 0.7;
+        }
+
+        .content {
+            padding: 2.5rem 2.8rem 2rem;
+        }
+
+        .card {
+            background: #fffffffa;
+            backdrop-filter: blur(4px);
+            border-radius: 28px;
+            padding: 1.8rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 6px 18px rgba(120, 70, 40, 0.06);
+            border: 1px solid rgba(235, 205, 180, 0.30);
+            transition: transform 0.2s ease, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(130, 80, 40, 0.08);
+        }
+
+        .card h2 {
+            font-size: 1.6rem;
+            font-weight: 480;
+            color: #4d2f20;
+            margin-bottom: 0.7rem;
+            border-left: 4px solid #dba77b;
+            padding-left: 0.9rem;
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            font-weight: 450;
+            color: #5a3a28;
+            margin: 1.2rem 0 0.5rem;
+        }
+
+        .card p {
+            margin-bottom: 0.9rem;
+            color: #3f2d24;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .inline-link {
+            color: #935f3f;
+            text-decoration: none;
+            font-weight: 470;
+            border-bottom: 2px solid #dba77b;
+            padding-bottom: 1px;
+            transition: background 0.15s, border-color 0.15s;
+            border-radius: 0 0 2px 2px;
+        }
+
+        .inline-link:hover {
+            background: #f3dac4;
+            border-bottom-color: #b57849;
+        }
+
+        .pill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem 1rem;
+            margin: 1rem 0 0.2rem;
+        }
+
+        .pill {
+            background: #f2e3d7;
+            padding: 0.2rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: #4a3226;
+            border: 1px solid #ddc2ae;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem 1.8rem;
+            margin: 1rem 0 0.2rem;
+        }
+
+        .faq-item {
+            background: #f8efe8;
+            border-radius: 20px;
+            padding: 0.8rem 1rem;
+            border-left: 4px solid #dba77b;
+        }
+
+        .faq-item q {
+            font-style: normal;
+            font-weight: 450;
+            display: block;
+            margin-bottom: 0.3rem;
+            color: #3b281e;
+        }
+
+        .faq-item .answer {
+            color: #4f382b;
+            font-size: 0.92rem;
+        }
+
+        .footer-note {
+            text-align: center;
+            padding: 1.8rem 2rem 2.2rem;
+            border-top: 1px solid #e8d4c2;
+            background: #faf0e9;
+            border-radius: 0 0 28px 28px;
+        }
+
+        .footer-note p {
+            font-size: 1rem;
+            color: #4e372b;
+            margin-bottom: 0.6rem;
+        }
+
+        .footer-note .small-hint {
+            font-size: 0.85rem;
+            opacity: 0.65;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 1.2rem 0.8rem;
+            }
+            .hero {
+                padding: 2.5rem 1.5rem 2rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .content {
+                padding: 1.5rem 1rem 1rem;
+            }
+            .card {
+                padding: 1.2rem 1.2rem;
+            }
+            .faq-grid {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+            }
+            .pill-list {
+                gap: 0.4rem 0.6rem;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+            .card h2 {
+                font-size: 1.3rem;
+            }
+            .card {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <div class="hero">
+        <h1>365bet · 信息索引</h1>
+        <span class="subhead">资料整理 · 专题梳理</span>
+        <span class="reading-time">阅读约 6 分钟 · 内容基于公开材料汇编</span>
+    </div>
+
+    <div class="content">
+
+        <!-- 卡片 1: 背景说明 + 索引意义 -->
+        <div class="card">
+            <h2>从信息脉络出发</h2>
+            <p>在日常的资讯收集中，我们时常会遇到大量零散的来源：有些指向某个平台的介绍，有些则是功能说明或用户讨论。<strong>如何将这些信息组织成可检索的结构</strong>，是许多资料整理者关心的话题。本文以 <a href="https://index-365bet.com" class="inline-link">365bet</a> 这一常见名词作为索引标的，梳理与其相关的背景、分类与常见场景，供需要快速了解基础轮廓的读者参考。</p>
+            <p>在整理过程中，我们尽量回避主观评价，侧重于归纳公开可查的功能模块、使用逻辑以及典型的应用语境。这既是一份资料笔记，也是一份索引地图——方便日后按图索骥，进一步深入查阅。</p>
+            <div class="pill-list">
+                <span class="pill">平台框架</span>
+                <span class="pill">资料归档</span>
+                <span class="pill">功能模块</span>
+                <span class="pill">用户界面</span>
+            </div>
+        </div>
+
+        <!-- 卡片 2: 三段自然介绍 (杂志式) -->
+        <div class="card">
+            <h2>功能层次与使用场景</h2>
+
+            <h3>▎导航与分类结构</h3>
+            <p>从许多用户的反馈来看，一个直观的信息入口往往决定了检索效率。当我们提到 <a href="https://index-365bet.com" class="inline-link">365bet</a> 时，通常指的是它提供的归类界面：将不同用途的栏目按版块区分，并通过清晰的层级引导使用者快速定位。这种设计思路在资料索引领域很常见，重点在于保持逻辑连贯与视觉一致。</p>
+
+            <h3>▎常用模块与操作习惯</h3>
+            <p>根据公开资料，该索引系统下包含若干功能区块，例如信息浏览、状态查询、以及历史记录回顾等。用户一般会先通过首页概览了解整体框架，再根据自身需求深入到子页面。值得注意的是，不同区域的更新频率和内容颗粒度有所区别，整理时最好依据时间戳或类别标签加以区分。</p>
+
+            <h3>▎资料整合的价值</h3>
+            <p>对于信息收集者而言，将零散的数据点串联成结构化的索引，能够降低重复检索的成本。无论是个人的书签整理，还是团队的知识库搭建，像 <a href="https://index-365bet.com" class="inline-link">365bet</a> 这样的入口都可以作为一个参考框架——关键在于保持分类的稳定与更新节奏的透明。本篇介绍即尝试以此为目标，提供一个可供扩展的基础版本。</p>
+        </div>
+
+        <!-- 卡片 3: FAQ 摘要 + 特点微格 -->
+        <div class="card">
+            <h2>常见疑问 · 摘要</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <q>这个索引主要包含哪些内容？</q>
+                    <span class="answer">主要涵盖功能分区、常见操作路径以及信息更新习惯，不涉及具体引导或推荐。</span>
+                </div>
+                <div class="faq-item">
+                    <q>资料整理者如何从中受益？</q>
+                    <span class="answer">可以借鉴其分类逻辑和模块命名方式，用于自己的信息管理或笔记体系。</span>
+                </div>
+                <div class="faq-item">
+                    <q>是否包含第三方评价？</q>
+                    <span class="answer">不。本文仅从索引与结构角度进行客观描述，不收集或引用外部评论。</span>
+                </div>
+                <div class="faq-item">
+                    <q>如何保持信息时效？</q>
+                    <span class="answer">建议定期对比官方来源与公开档案，同时标注版本日期以利回溯。</span>
+                </div>
+            </div>
+            <p style="margin-top: 1.2rem; font-size: 0.95rem;">以上问答均基于通用信息整理原则，并非针对特定服务。</p>
+        </div>
+
+        <!-- 结尾卡片: 场景提示（非硬广） -->
+        <div class="card" style="margin-bottom: 0.8rem;">
+            <h2>索引场景延伸</h2>
+            <p>如果你正在建立自己的资料库或知识笔记，可以将 <a href="https://index-365bet.com" class="inline-link">365bet</a> 当作一个分类标签示例，尝试分析它的架构层次：首页如何聚合入口？二级页面怎样划分内容？这些设计思路可以迁移到个人项目、团队文档或是专题研究中。</p>
+            <p>在信息过载的时代，学会筛选和结构化比单纯收集更重要。一份干净的索引，就是一张清晰的地图。</p>
+        </div>
+
+    </div>
+
+    <div class="footer-note">
+        <p>📋 资料整理 · 专题索引</p>
+        <p class="small-hint">本页内容仅从信息组织与分类角度展开，不构成任何操作指引或偏好建议。</p>
+    </div>
+</div>
+</body>
+</html>
